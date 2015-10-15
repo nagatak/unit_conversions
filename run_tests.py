@@ -3,7 +3,7 @@
 import unittest
 
 from src.convert import kilometers_to_miles, miles_to_kilometers,\
-                        years_to_minutes, minutes_to_years
+                        years_to_minutes, minutes_to_years, inches_to_centimeters
 
 class TestConvert(unittest.TestCase):
 
@@ -24,6 +24,14 @@ class TestConvert(unittest.TestCase):
     def test_minutes_to_years(self):
         self.assertEqual(1, minutes_to_years(525600))
 
+    def test_inches_to_centimeters(self):
+        actual = inches_to_centimeters(1)
+        expected = 2.54 # from google
+        self.assertAlmostEqual(actual, expected, delta=0.01)
+    def test_less_inches_to_centimeters(self):
+        actual = inches_to_centimeters(1)
+        expected = 2.54 # from google
+        self.assertLessEqual(actual, expected + 1)
 
 
 ##########################

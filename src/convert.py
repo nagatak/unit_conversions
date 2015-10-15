@@ -9,3 +9,7 @@ def years_to_minutes(value):
 
 def minutes_to_years(value):
     return value / (365 * 24 * 60)
+
+def inches_to_centimeters(value):
+    return value * 2.54
+    

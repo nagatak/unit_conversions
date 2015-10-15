@@ -5,7 +5,7 @@
 import argparse
 
 from src.convert import kilometers_to_miles, miles_to_kilometers,\
-        years_to_minutes, minutes_to_years
+        years_to_minutes, minutes_to_years, inches_to_centimeters
 
 # Parse command line args
 parser = argparse.ArgumentParser()
@@ -28,3 +28,7 @@ print("{0} years is {1} minutes".format(args.value, to_minutes))
 # minutes to years
 to_years = minutes_to_years(args.value)
 print("{0} minutes is {1} years".format(args.value, to_years))
+
+# inches to centimeters
+to_centimeters =  inches_to_centimeters(args.value)
+print("{0} inches is {1} centimeters".format(args.value, to_centimeters))
